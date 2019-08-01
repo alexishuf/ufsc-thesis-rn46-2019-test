@@ -1,0 +1,45 @@
+\chapter{Exemplos de formatação}
+\label{ch:ex}
+
+Essa frase é verdadeira pois tem um \mt|\cite| no final \cite{turing1937}. Essa é mais verdadeira ainda pois tem um (\mt|\cite{turing1937,dijkstra1968}|) no final \cite{turing1937,dijkstra1968}. Já esta frase inofensiva usa \mt|\citeonline{dijkstra1968}| para citar \citeonline{dijkstra1968} nominalmente. O trabalho de \citeonline{diffie1976} foi altamente influente \cite{diffie1976}. Essa outra frase cita o trabalho que \citeonline{golub1992} escreveu com outros 9 autores.
+
+
+A lista abaixo mostra o efeito de \mt|\autoref{}| com capítulos e (sub)seções.
+
+\begin{itemize}
+\item \autoref{ch:ex}
+\item \autoref{sec:stuff}
+\item \autoref{sec:more}
+\item \autoref{sec:yet-more}
+\end{itemize}
+
+Atenção! O template da BU deixa figuras e tabelas alinhadas à esquerda. No entanto, o tutorial de Word disponibilizado pela BU diz que Legendas e captions devem respeitar o ``alinhamento da ilustração'' (e apresenta uma ilustração alinhada a esquerda). O tutorial explicando a ABNT mostra uma figura centralizada com legendas alinhadas a esquerda e com recuo até o começo da figura. O autor do .cls se exime de qualquer culpa. Alinhe aqui (com \mt|\centering|, \mt|\flushright| ou \mt|\flushleft|) como mandar o seu coração.
+
+A \autoref{fig:figura} é uma figura de exemplo. Para gerar o ``Fonte:'' (que aparece como ``Source:'' na versão inglês') foi usada o comando \mt|\captionsource{o autor}|. Essa macro, \mt|\captionsource| foi introduzida pela classe \texttt{ufsc-thesis-rn46-2019}.
+
+\begin{figure}[t]
+  \centering
+  \caption{\footnotesize A caption text.}
+  \label{fig:figura}
+  %\lipsum[1]
+
+  \includegraphics[width=.5\linewidth]{../logo-ufsc.pdf}
+  \captionsource{The author.}
+\end{figure}
+
+\section{Coisas}
+\label{sec:stuff}
+Imagine alguma afirmação de alto valor científico aqui.
+
+\subsection{Outras coisas}
+\label{sec:more}
+Olá! Eu vim do passado para te avisar que o texto de uma dissertação deve ser impessoal e você não deveria tentar conversar com o leitor. 
+
+\subsubsection{Outras coisas mais}
+\label{sec:yet-more}
+Estudos demonstram que essa afirmação é falsa.
+
+\subsubsubsection{Ainda outras coisas mais}
+\label{sec:yet-another}
+Fazer a grama verde, como? Novamente o jogo foi perdido. Opcionalmente, tudo pode ser opcional. Recursos foram gastos com isso. Descubra a verdade nas capitalizadas.
+% Fiquei 15 minutos mais próximo da morte ao escrever isso. Você pode chegar ainda mais perto se tentar entender.
