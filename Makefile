@@ -1,11 +1,10 @@
 define do_make
 	cd "$(1)" &&  latexmk $(2) -pdf -use-make -cd main.tex
-	cd "$(1)" &&  bibtex main.aux
-	cd "$(1)" &&  latexmk $(2) -pdf -use-make -cd main.tex
 endef
 
 define do_clean
 	cd "$(1)" && latexmk -cd -CA
+	# Remove coisas que escapam das garras do latexmk
 	cd "$(1)" && rm -f main.pdf *.dvi *.bbl *.nav *.ilg *.idx *.64 main-logo.pdf
 	cd "$(1)" && rm -fr auto _minted-*
 endef
