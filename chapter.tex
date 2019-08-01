@@ -1,11 +1,15 @@
-\chapter{Exemplos de formatação}
-\label{ch:ex}
-
-Essa frase é verdadeira pois tem um \mt|\cite| no final \cite{turing1937}. Essa é mais verdadeira ainda pois tem um (\mt|\cite{turing1937,dijkstra1968}|) no final \cite{turing1937,dijkstra1968}. Já esta frase inofensiva usa \mt|\citeonline{dijkstra1968}| para citar \citeonline{dijkstra1968} nominalmente. O trabalho de \citeonline{diffie1976} foi altamente influente \cite{diffie1976}. Essa outra frase cita o trabalho que \citeonline{Saleem2018} escreveu com outros 4 autores.
+Essa frase é verdadeira pois tem um \mt|\cite| no final \cite{turing1937}. Essa
+é mais verdadeira ainda pois tem um (\mt|\cite{turing1937,dijkstra1968}|) no
+final \cite{turing1937,dijkstra1968}. Já esta frase inofensiva usa
+\mt|\citeonline{dijkstra1968}| para citar \citeonline{dijkstra1968}
+nominalmente. O trabalho de \citeonline{diffie1976} foi altamente influente
+\cite{diffie1976}. Essa outra frase cita o trabalho que \citeonline{Saleem2018}
+escreveu com outros 4 autores.
 
 Mais algumas citações de tipos específicos de documentos:
 \begin{itemize}
-\item \mt|@inproceedings|. \citeonline{Ullman1989magic}. Jabuti \cite{Ullman1989magic}.
+\item \mt|@inproceedings|. \citeonline{Ullman1989magic}. Jabuti
+  \cite{Ullman1989magic}.
 \item \mt|@article|. \citeonline{Distefano2019}. Framboesa \cite{Distefano2019}.
 \item \mt|@book|. \citeonline{Abiteboul1995}. Goiaba \cite{Abiteboul1995}.
 \item \mt|@incollection| \citeonline{Forgy1989}. Melancia \cite{Forgy1989}.
@@ -21,18 +25,33 @@ A lista abaixo mostra o efeito de \mt|\autoref{}| com capítulos e (sub)seções
 \item Há coisas na \autoref{sec:yet-more}.
 \end{itemize}
 
-Atenção! O template da BU deixa figuras e tabelas alinhadas à esquerda. No entanto, o tutorial de Word disponibilizado pela BU diz que Legendas e captions devem respeitar o ``alinhamento da ilustração'' (e apresenta uma ilustração alinhada a esquerda). O tutorial explicando a ABNT mostra uma figura centralizada com legendas alinhadas a esquerda e com recuo até o começo da figura. O autor do .cls se exime de qualquer culpa. Alinhe aqui (com \mt|\centering|, \mt|\flushright| ou \mt|\flushleft|) como mandar o seu coração.
+Citações são feitas com \mt|\begin{citacao}...\end{citacao}|. A BU faz
+as mesmas exigências que já são o \textit{default} na classe \abnTeX2.
 
-A \autoref{fig:figura} é uma figura de exemplo. Para gerar o ``Fonte:'' (que aparece como ``Source:'' na versão inglês') foi usada o comando \mt|\captionsource{o autor}|. Essa macro, \mt|\captionsource| foi introduzida pela classe \texttt{ufsc-thesis-rn46-2019}.
+\begin{citacao}
+  A elaboração do trabalho de conclusão de curso em nível de mestrado
+  e de doutorado na UFSC deverá atender aos critérios e procedimentos
+  estabelecidos nesta resolução normativa e em diretrizes
+  estabelecidas pela Pró-Reitoria de Pós-Graduação e pelos Programas
+  de Pós-Graduação.
+\end{citacao}
+
+Atenção! O template da BU deixa figuras e tabelas alinhadas à esquerda. No
+entanto, o tutorial de Word disponibilizado pela BU diz que legendas e
+\emph{captions} devem respeitar o ``alinhamento da ilustração'' (e apresenta
+uma ilustração alinhada à esquerda). O tutorial explicando a ABNT mostra uma
+figura centralizada com legendas alinhadas a esquerda e com recuo até o começo
+da figura. O autor do \texttt{.cls} se exime de qualquer culpa. Alinhe aqui
+(com \mt|\centering|, \mt|\flushright| ou \mt|\flushleft|) como mandar o seu
+coração. Veja na \autoref{fig:logo} o efeito de se usar \mt|\centering|.
 
 \begin{figure}[t]
   \centering
-  \caption{\footnotesize A caption text.}
-  \label{fig:figura}
-  %\lipsum[1]
+  \caption{Logotipo da Universidade Federal de Santa Catarina.}
+  \label{fig:logo}
 
-  \includegraphics[width=.5\linewidth]{../logo-ufsc.pdf}
-  \captionsource{The author.}
+  \includegraphics[width=.2\linewidth]{../logo-ufsc.pdf}
+  \captionsource{O autor.}
 \end{figure}
 
 \section{Coisas}
@@ -41,7 +60,8 @@ Imagine alguma afirmação de alto valor científico aqui.
 
 \subsection{Outras coisas}
 \label{sec:more}
-Olá! Eu vim do passado para te avisar que o texto de uma dissertação deve ser impessoal e você não deveria tentar conversar com o leitor. 
+Olá! Eu vim do passado para te avisar que o texto de uma dissertação deve ser
+impessoal e você não deveria tentar conversar com o leitor.
 
 \subsubsection{Outras coisas mais}
 \label{sec:yet-more}
@@ -49,5 +69,8 @@ Estudos demonstram que essa afirmação é falsa.
 
 \subsubsubsection{Ainda outras coisas mais}
 \label{sec:yet-another}
-Fazer a grama verde, como? Novamente o jogo foi perdido. Opcionalmente, tudo pode ser opcional. Recursos foram gastos com isso. Descubra a verdade nas capitalizadas.
-% Fiquei 15 minutos mais próximo da morte ao escrever isso. Você pode chegar ainda mais perto se tentar entender.
+Fazer a grama verde, como? Novamente o jogo foi perdido. Opcionalmente, tudo
+pode ser opcional. Recursos foram gastos com isso. Descubra a verdade nas
+capitalizadas.
+% Fiquei 15 minutos mais próximo da morte ao escrever isso. Você pode chegar
+% ainda mais perto se tentar entender.
