@@ -1,4 +1,5 @@
 *.aux
+*-availableat.bst
 *.64
 *.fdb_latexmk
 *.fls
