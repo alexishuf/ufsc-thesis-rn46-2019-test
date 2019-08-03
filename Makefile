@@ -10,11 +10,13 @@ endef
 
 all: 
 	$(call do_make,english,-shell-escape)
+	$(call do_make,brazil,-shell-escape)
 	$(call do_make,no-embeddedlogo,)
 
 clean: 
 	$(call do_clean,.)
 	$(call do_clean,english)
+	$(call do_clean,brazil)
 	$(call do_clean,no-embeddedlogo)
 
 .PHONY: all clean
